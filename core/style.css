@@ -45,7 +45,7 @@ li {
   width: 100%;
 }
 
-.contents-flex-box {
+.contents-grid-box {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
