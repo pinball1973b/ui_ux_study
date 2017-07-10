@@ -1,0 +1,157 @@
+.slide{
+  .all-top{
+  font-size: 3.5em;
+  }
+}
+
+
+.profile {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.center-text-box {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.normal-list {
+  li {
+    list-style-type: disc;
+  }
+}
+
+.contents-box {
+  dt {
+    font-size: 2.5rem;
+    font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  }
+  dd {
+    margin-bottom: 10vh;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.decimal {
+  li {
+    list-style-type: decimal;
+  }
+}
+
+.wikipedia {
+  width: 100%;
+}
+
+.deck-slide-scaler {
+  width: 100%;
+}
+
+.contents-flex-box {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+}
+
+.contents-section-box {
+  position: relative;
+  font-size: 20px;
+  display: inline-flex;
+  div[class^=word]{
+    width: 350px;
+    height: 130px;
+    padding: 40px 10px 10px 10px;
+    border-radius: 35%;
+    background: #fff;
+    position: relative;
+    &:after {
+      border-right: 12px solid #fff;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      content: '';
+      margin-top: -10px;
+      position: absolute;
+      left: -12px;
+      top: 50%;
+    }
+  }
+  .word_5 {
+    width: 700px;
+    height: 130px;
+    padding: 40px 10px 10px 10px;
+    border-radius: 35%;
+    background: #fff;
+    position: relative;
+    top: 200px;
+    font-size: 3rem;
+  }
+  .img-box {
+    img {
+      height: 300px;
+    }
+  }
+}
+.hatena {
+  margin: 10%;
+  .contents-section-box {
+    width: 1000px;
+    .word_5 {
+      width: 500px;
+      text-align: center;
+    }
+  }
+  .img-box {
+    img {
+      height: 600px;
+    }
+  }
+}
+
+.version-flow-box {
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    &.box-1 {
+      li {
+      background: #ff9d00;
+      margin: 0 140px;
+      }
+    }
+    &.box-2 {
+      padding-left: 210px;
+      li {
+      background: #0081c6;
+      margin: 70px;
+      }
+    }
+    &.box-3 {
+      padding-left: 380px;
+      li {
+      background: #01b5ac;
+      margin: 70px;
+      }
+    }
+    li {
+      width: 200px;
+      height: 200px;
+      padding-top: 60px;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.small-img {
+  img {
+    width: 400px;
+    display: inline;
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Branu Git勉強会 | ゼロから始める$git commit -m</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+  <link rel="stylesheet" media="screen" href="core/style.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/neon.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1 class="all-top">はじめてのUI</h1>
+      <div class="profile">Branu開発部 小原 国人</div>
+    </section>
+
+    <section class="slide">
+      <h2>Agenda</h2>
+      <div>
+        <ol class="decimal">
+          <li>UIとUXの違い</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>UIとUXの違い</h2>
+      <div>
+        <h3>UI(ユーザーインターフェース)</h3>
+        <p>ユーザーがWEB・アプリケーション・プロダクトを操作するための手段。</p>
+        <ul>
+          <li>WEBサイト・アプリのレイアウト、ボタン、バナー、挙動（アニメーション、遷移、スプラッシュやローディング）など</li>
+          <li>家電や機械類の操作系（テレビのリモコンと操作画面、電話の受話器やダイヤルボタン、自動車のハンドルやシフトレバーなど）</li>
+      </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>UIとUXの違い</h2>
+      <div>
+        <h3>UX(ユーザーエクスペリエンス)</h3>
+        <p>ユーザーが操作したことによって得られる体感、操作性</p>
+        <ul>
+          <li>ECサイトで欲しい商品を検索する（フリーワード？カテゴリ？特集ページ？）→商品一覧が表示される（人気順？価格順？新着順）→商品詳細ページが表示される（商品のスペック、価格、在庫数、商品の種類など）→購入ページ（決済方法、配送日時、ギフトオプションなど）→購入完了ページ</li>
+          <li>会社の歓送迎会のために、お店を検索する（お店のジャンル？地域？予算？）→店舗一覧が表示される（人気順？予算順？）→店舗詳細ページ（空き状況、コース、予算など）→予約ページ（予約日時、コース、オプションなど）→予約完了ページ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>UXを実現するためのUI</h2>
+      <div>
+        <p>「購入しやすい」「わかりやすい」「必要な情報にストレスなくアクセスできる」</p>
+        <ul>
+          <li>プロモーションサイト・コーポレートサイトではシングルカラム。ECサイトやポータルサイトなどでは2・3カラム。</li>
+          <li>コーポレートサイトやポータルサイトなど情報へのアクセスが重視されるサイトでは、重い画像やアニメーションでページの読み込みを待たされない。</li>
+          <li>ティザーサイトやキャンペーンサイトはプロモーション的な意味合いが強いので、逆に多少重くなってもアニメーションや動画などを多用する。</li>
+          <li>機器やソフトウェアの操作マニュアルで、イラストなどを使用しわかりやすく説明する。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>UI=エンジニアリング UX=ディレクション</h2>
+      <div>
+        <h3>UI/UXはクリエイティブ領域であるが、UIは手段の実現のため技術的な側面を持つ。</h3>
+        <p>例：顧客管理WEBアプリで、TOPページから出来る限り少ない操作、ページ遷移で必要な情報にアクセスしたい→シングルページアプリケーション<br>
+        ECサイトでTOPページだけではなく、検索エンジンやSNSからの流入も考慮したい→EC用パッケージCMS</p>
+      </div>
+      <div>
+        <h3>一方で、UXはこれらを実際に運用して改善していく側面が強く、ディレクションの要素が強い。</h3>
+        <p>例：リフォーム会社で問合せフォームからの問い合わせを増やしたい→入力必須項目を減らす(気軽に問い合わせを出来るように)・フォームパーツと背景のコントラストを強く（入力わかりやすくするやめ）・LPやサテライトサイトを用意しTOPや検索以外の流入を増やすなど</p>
+      </div>
+      <div>
+        <p>いずれもABテスト/ユーザーテストによりPDCAサイクルを回す</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>新しいUIが良いUXになるとは限らない</h2>
+      <div>
+        <h3>例：某外食チェーン採用サイト</h3>
+        <p>http://www.kura-corpo.co.jp/recruit/<br>
+        http://www.kura-corpo.co.jp/recruit/new.html</p>
+        <p>募集要項やエントリーフォームへのリンクが動いているため、読みづらくクリックしにくい。</p>
+      </div>
+      <div>
+        <h3>例：某外食ケータリングサービス</h3>
+        <p>https://www.ubereats.com/tokyo/</p>
+        <p>検索ボタンが有るにも関わらず、サジェストをクリックしないとページにアクセスできない。</p>
+        <p>商品ページが存在せず（モーダル）、検索やSNSなどからの流入が考慮されていない。</p>
+        <p>特定商取引法・アレルギー表示など、法的に必要な文書へのアクセスがない</p>
+      </div>
+      <p>いずれの例も、一見すると新しい技術を使い新しいUIに見えるが、UXは低下している。</p>
+      <p>×新しいかどうか<br>
+      ○適切かどうか</p>
+    </section>
+
+    <section class="slide">
+      <h2>ハンズオン</h2>
+      <p>実際に作ってみよう(プロトタイピング)</p>
+      <p>https://prottapp.com/ja/</p>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
