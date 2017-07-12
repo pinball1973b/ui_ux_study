@@ -36,7 +36,7 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1 class="all-top">はじめてのUI</h1>
+      <h1 class="all-top">はじめてのUIとUX</h1>
       <div class="profile">Branu開発部 小原 国人</div>
     </section>
 
@@ -48,6 +48,8 @@
           <li>UXを実現するためのUI</li>
           <li>UI=エンジニアリング UX=ディレクション</li>
           <li>新しいUIが良いUXになるとは限らない</li>
+          <li>プロトタイピングとは</li>
+          <li>プロトタイピングの流れ</li>
           <li>ハンズオン</li>
         </ol>
       </div>
@@ -67,6 +69,10 @@
         <img src="img/ui.png" alt="ui">
         <img src="img/ui2.jpg" alt="ui2">
       </div>
+      <ul class="normal-list">
+        <li>ピクトグラムなどはISO規格・Material iconsなどある程度規格化されている。</li>
+        <li>法規制のある分野（自動車・機械系など）、デファクトスタンダード化しているもののUIは改善はしても改変はしない。</li>
+      </ul>
     </section>
 
     <section class="slide">
@@ -83,6 +89,9 @@
         <img src="img/ux.png" alt="ux">
         <img src="img/ux2.png" alt="ux2">
       </div>
+      <ul class="normal-list">
+        <li>操作系は少ないほうがベストな一方で、最低限必要な表示</li>
+      </ul>
     </section>
 
     <section class="slide">
@@ -100,55 +109,128 @@
         <img src="img/prd1.png" alt="WEB">
         <img src="img/prd2.png" alt="DTP">
       </div>
+      <ul class="normal-list">
+        <li>メディアや機器(PCとモバイルと家電・WEBと紙など)によって最適なUXは異なる</li>
+        <li>設定されるゴールによっても最適解は異なる（問合せ？購入？PV？実際の操作と継続使用？）</li>
+      </ul>
     </section>
 
     <section class="slide">
       <h2>UI=エンジニアリング UX=ディレクション</h2>
       <div>
-        <h3>UI/UXはクリエイティブ領域であるが、UIは手段の実現のため技術的な側面を持つ。</h3>
-        <p>例：顧客管理WEBアプリで、TOPページから出来る限り少ない操作、ページ遷移で必要な情報にアクセスしたい→シングルページアプリケーション<br>
-        ECサイトでTOPページだけではなく、検索エンジンやSNSからの流入も考慮したい→EC用パッケージCMS</p>
+        <h3>UIとUXはクリエイティブ領域であるが、UIは手段の実現のため技術的な側面を持つ。</h3>
+        <h4>例：顧客管理WEBアプリで、TOPページから出来る限り少ない操作、ページ遷移で必要な情報にアクセスしたい→シングルページアプリケーション</h4>
+        <ul class="normal-list">
+          <li>ECサイトでTOPページだけではなく、検索エンジンやSNSからの流入も考慮したい。更に商品検索・メディア・会員機能・決済機能・カートなど多機能に→EC用パッケージCMS+検索エンジン+WordPressでマイクロサービス（複数ドメイン運用）</li>
+        </ul>
       </div>
       <div>
-        <p>いずれもABテスト/ユーザーテストによりPDCAサイクルを回す</p>
+        <p>会社によってはフロントエンドエンジニアがUIデザイナーを兼ねている場合も多い</p>
       </div>
+      <div class="contents-grid-box">
+        <img src="img/arc1.png" alt="arc1">
+        <img src="img/arc2.png" alt="arc2">
+      </div>
+      <ul class="normal-list">
+        <li>インタラクション設計など、JavaScript/CSS3の知識が必要。</li>
+        <li>ページ遷移やコンテンツ表示の切り替えなど、一部DBやアーキテクト設計の知見が必要な場合あり。</li>
+      </ul>
     </section>
 
     <section class="slide">
       <h2>UI=エンジニアリング UX=ディレクション</h2>
       <div>
         <h3>一方で、UXはこれらを実際に運用して改善していく側面が強く、ディレクションの要素が強い。</h3>
-        <p>例：リフォーム会社で問合せフォームからの問い合わせを増やしたい→入力必須項目を減らす(気軽に問い合わせを出来るように)・フォームパーツと背景のコントラストを強く（入力わかりやすくするやめ）・LPやサテライトサイトを用意しTOPや検索以外の流入を増やすなど</p>
+        <h4>例：リフォーム会社で問合せフォームからの問い合わせを増やしたい</h4>
+        <ul class="normal-list">
+          <li>入力必須項目を減らす(気軽に問い合わせを出来るように)</li>
+          <li>郵便番号や現在地などで住所を自動入力</li>
+          <li>フォームパーツと背景のコントラストを強く（入力わかりやすくするやめ）、フォーカス時に強調、入力例などを表示</li>
+          <li>LPやサテライトサイトを用意しTOPや検索以外の流入を増やすなど</li>
+        </ul>
       </div>
       <div>
-        <p>会社によってはフロントエンドエンジニアがUIデザイナーを兼ねている場合も多い</p>
+
       </div>
+      <div class="contents-grid-box">
+        <img src="img/p1.png" alt="arc1">
+        <img src="img/p2.png" alt="arc2">
+      </div>
+      <p>いずれもABテスト/ユーザーテストによりPDCAサイクルを回す</p>
     </section>
 
     <section class="slide">
       <h2>新しいUIが良いUXになるとは限らない</h2>
       <div>
         <h3>例：某外食チェーン採用サイト</h3>
-        <p>http://www.kura-corpo.co.jp/recruit/<br>
-        http://www.kura-corpo.co.jp/recruit/new.html</p>
-        <p>募集要項やエントリーフォームへのリンクが動いているため、読みづらくクリックしにくい。</p>
+        <ul class="normal-list">
+          <li>http://www.kura-corpo.co.jp/recruit/<br>
+          http://www.kura-corpo.co.jp/recruit/new.html</li>
+          <li>募集要項やエントリーフォームへのリンクが動いているため、読みづらくクリックしにくい。</li>
+        </ul>
       </div>
       <div>
         <h3>例：某外食ケータリングサービス</h3>
-        <p>https://www.ubereats.com/tokyo/</p>
-        <p>検索ボタンが有るにも関わらず、サジェストをクリックしないとページにアクセスできない。</p>
-        <p>商品ページが存在せず（モーダル）、検索やSNSなどからの流入が考慮されていない。</p>
-        <p>特定商取引法・アレルギー表示など、法的に必要な文書へのアクセスがない</p>
+        <ul class="normal-list">
+          <li>https://www.ubereats.com/tokyo/</li>
+          <li>検索ボタンが有るにも関わらず、サジェストをクリックしないとページにアクセスできない。</li>
+          <li>商品ページが存在せず（モーダル）、検索やSNSなどからの流入が考慮されていない。</li>
+          <li>特定商取引法・アレルギー表示など、法的に必要な文書へのアクセスがない</li>
+        </ul>
       </div>
-      <p>いずれの例も、一見すると新しい技術を使い新しいUIに見えるが、UXは低下している。</p>
-      <p>×新しいかどうか<br>
-      ○適切かどうか</p>
+      <ul class="normal-list">
+        <li>いずれの例も、一見すると新しい技術を使い新しいUIに見えるが、UXは低下している。</li>
+        <li>×新しいかどうか　○適切かどうか</li>
+      </ul>
+      <div><p>※あえてリンクは貼っていません</p></div>
     </section>
+
+    <section class="slide">
+      <h2>プロトタイピングとは</h2>
+      <div>
+        <h3>プロトタイピングとは</h3>
+        <p>主にモバイルアプリ・WEBなどで行われるUI設計手法。従来のカンプベースのデザインと比較して、インタラクションやページ遷移、ユーザーアクションなども考慮されており、かつ高速でモダンなUIデザイン手法である。</p>
+        <ul class="normal-list">
+          <li><a href="https://prottapp.com/ja/">Prott</a></li>
+          <li><a href="http://www.adobe.com/jp/products/experience-design.html">Adobe XD</a></li>
+          <li><a href="http://origami.design/">Origami Studio</a></li>
+        </ul>
+      </div>
+      <div class="contents-grid-box">
+        <img src="img/prt1.png" alt="prt1">
+        <img src="img/prt2.png" alt="prt2">
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>プロトタイピングの流れ</h2>
+      <ol class="decimal">
+        <li>アプリ・WEBの大まかな要件定義、ユーザーストーリー(業務フロー)
+          、ペルソナ、対応機器やブラウザを決めておく</li>
+        <li>ワイヤーフレーム（手書きorツール）を作成する<br>
+          ※Excelや Powerpointでは作らない！
+        </li>
+        <li>プロトタイプツールでアクションを作成する</li>
+        <li>PJメンバーで集まり内容をレビュー</li>
+        <li>3の結果を受けて修正</li>
+        <li>以降、ブラッシュアップしモックアップへ移行していく。</li>
+      </ol>
+      <div class="contents-grid-box">
+        <img src="img/mock1.png" alt="mock1">
+        <img src="img/mock2.png" alt="mock2">
+      </div>
+      <ul class="normal-list">
+        <li>場合によってはワイヤー→モックという手法も有り（UIデザイナーとフロントエンドエンジニアが兼任、または並行作業できる場合）。並行してカラーチャート、スタイルガイド、カンプ等を作成する。</li>
+        <li>ワイヤーは紙やホワイトボードへの手書きを使う場合もあり（ペーパープロトタイピング）</li>
+      </ul>
+    </section>
+
 
     <section class="slide">
       <h2>ハンズオン</h2>
       <p>実際に作ってみよう(プロトタイピング)</p>
-      <p>https://prottapp.com/ja/</p>
+      <p><a href="https://prottapp.com/ja/">prott</a></p>
+      <p><a href="https://prottapp.com/p/0406c7">サンプル</a></p>
     </section>
 
     <!-- End slides. -->
